@@ -1,0 +1,3 @@
+[submodule "themes/columbula"]
+	path = themes/columbula
+	url = https://github.com/Siornya/hexo-theme-columbula
