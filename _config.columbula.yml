@@ -12,6 +12,13 @@ menu:
   categories: /categories
   tags: /tags
 
+# 特殊页面
+# 让对应 type 的页面自动套用 layout/<模板>.ejs
+special_pages:
+  about: about
+  categories: categories
+  tags: tags
+
 # 色调
 # 主题色（暖蓝）
 accent_color: "#5b8dee"
@@ -38,4 +45,4 @@ covers_dir: images/covers
 highlight_theme: github    # github | atom-one-dark | monokai
 
 # 页脚
-footer: "2023-10-21"
+footer: 致持续描绘的你
