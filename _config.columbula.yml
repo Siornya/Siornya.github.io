@@ -2,7 +2,14 @@
 nav_position: top
 
 # 个人信息
-avatar: /images/avatar.png     # 放在 source/images/ 下
+avatar: /images/avatar.png
+
+# 首页 Hero（顶部封面 / 横幅）
+hero:
+  enable: true
+  style: text # text | cover
+  image: /images/hero.jpg
+  first_page_only: true 
 
 # 导航菜单
 menu:
@@ -20,7 +27,6 @@ special_pages:
   tags: tags
 
 # 色调
-# 主题色（暖蓝）
 accent_color: "#5b8dee"
 accent_dark:  "#3a6bd4"
 
@@ -37,7 +43,7 @@ glass_border:  0.8       # 0~1，白色边框透明度
 # 文章卡片
 excerpt_length: 240
 
-# 封面图目录（相对于 source/）
+# 封面图目录
 covers_dir: images/covers
 
 # 代码高亮
