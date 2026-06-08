@@ -18,6 +18,7 @@ menu:
   archives: /archives
   categories: /categories
   tags: /tags
+  cafe: https://space.siornya.cafe
 
 # 特殊页面
 # 让对应 type 的页面自动套用 layout/<模板>.ejs
