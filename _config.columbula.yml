@@ -1,0 +1,55 @@
+# 导航栏位置
+nav_position: top
+
+# 个人信息
+avatar: /images/avatar.png
+
+# 首页 Hero（顶部封面 / 横幅）
+hero:
+  enable: true
+  style: text # text | cover
+  image: /images/hero.jpg
+  first_page_only: true 
+
+# 导航菜单
+menu:
+  home: /
+  about: /about
+  archives: /archives
+  categories: /categories
+  tags: /tags
+  cafe: https://space.siornya.cafe
+
+# 特殊页面
+# 让对应 type 的页面自动套用 layout/<模板>.ejs
+special_pages:
+  about: about
+  categories: categories
+  tags: tags
+
+# 色调
+accent_color: "#5b8dee"
+accent_dark:  "#3a6bd4"
+
+# 页面背景渐变（支持两个颜色节点）
+bg_from: "#c8d8f8"
+bg_to:   "#e8f0fe"
+bg_angle: 135deg
+
+#  玻璃效果
+glass_blur:    16        # px，毛玻璃模糊强度
+glass_opacity: 0.58      # 0~1，卡片透明度
+glass_border:  0.8       # 0~1，白色边框透明度
+
+# 文章卡片
+excerpt_length: 240
+
+# 封面图目录
+covers_dir: images/covers
+
+# 代码高亮
+# 使用 highlight.js，风格见 source/css/highlight/
+highlight_theme: github    # github | atom-one-dark | monokai
+
+# 页脚
+footer: 致持续描绘的你
