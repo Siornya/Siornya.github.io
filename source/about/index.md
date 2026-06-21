@@ -4,6 +4,7 @@ date: 2026-06-05 20:18:03
 comments: false
 social:
   GitHub: https://github.com/Siornya
+  QQ: https://user.qzone.qq.com/3272424903/infocenter
 ---
 
 # 关于——我
@@ -11,6 +12,8 @@ social:
 早上好，我是沧灵诗Siornya
 
 远古时期在本站的名字写SurveryorCangMing沧月
+
+欢迎光临沧灵诗咖啡馆~这里是纯技术博客，咖啡馆中还有动态、画集、曲谱等各类内容
 
 爱好是游戏相关的开发，包括UE和各类游戏mod，也在做Bot
 
@@ -24,9 +27,7 @@ social:
 
 又在2023年10月进行了一次内容和结构的大重构，历经两次下线终于在2026年5月完成大复活（啪叽啪叽~）
 
-除此以外，个人空间[沧灵诗咖啡馆](https://siornya.cafe)中还有更多内容，以及动态博客Beta版
-
-怎样描绘呢？我生命中的无数遗憾，与五彩斑斓的你
+最后，请来[沧灵诗咖啡馆](https://siornya.cafe)里看看吧~
 
 # 贵安
 

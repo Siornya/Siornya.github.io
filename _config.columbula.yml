@@ -15,9 +15,9 @@ hero:
 menu:
   home: /
   about: /about
-  archives: /archives
   categories: /categories
   tags: /tags
+  archives: /archives
   cafe: https://space.siornya.cafe
 
 # 特殊页面

@@ -22,14 +22,39 @@ tags:
 
 # 新版
 
-## 配置环境
+## Fabric 的组成部分
 
-首先需要配置JDK和IDE。JDK方面需要的版本**取决于你要开发的Minecraft版本**：从 1.20.5（2024年4月）起 Minecraft 已经迁移到 **JDK 21**，因此现在开发新版本请直接安装 JDK 21；如果你还在维护 1.18 ~ 1.20.4 的老版本，则继续使用 JDK 17 即可。你可以在[这个网站](https://jdk.java.net/)获取各个版本的 OpenJDK，。IDE官方推荐的是[Intellij IDEA](https://www.jetbrains.com/idea/)，选择社区版即可（免费），愿意买专业版当然也行啦。VSC等编辑器也是可以用的，不过还是推荐使用IDEA。
+- Fabric Loader：模组加载器，用于在游戏启动时加载模组
+- Fabric API：一套 API 接口，封装了很多游戏内功能，本质上是一个基础模组
+- Fabric Loom：一款 Gradle 插件，用于开发和调试模组，并且完成编译和打包任务
+- Yarn：Yarn 是 Fabric 生态中的混淆映射表，用于反混淆
+
+*在Minecraft 26.1版本以后，mojang官方取消了混淆，Yarn已经不再为新版本提供支持，需要迁移到 Mojang 的官方映射*
+
+## 配置 JDK
+
+首先需要配置JDK(Java Development Kit)，用于编译和运行 Java 代码——Minecraft 本体以及 Fabric 都是基于 Java 的，所以这是开发环境的基础。
+
+对于 Minecraft 1.20.5 版本需要使用 JDK 21，而在更新的 26.1 及更新版本，需要使用 JDK 25。大部分情况下安装更新版本的 JDK 不会有问题，所以你可以直接选择最新的 LTS（长期支持）版本。
+
+一般来说 IDE 中提供了一键下载的方式，但是你也可以选择手动安装。可以选择[Temurin JDK](https://adoptium.net/zh-CN/temurin/releases)，由社区驱动更新，完全免费，这也是 Fabric 官方推荐的版本。或者也可以选择[Oracle JDK](https://www.oracle.com/cn/java/technologies/downloads/)，个人非商用免费，但商业需付费。
+
+安装完成后，记得检查环境变量 `JAVA_HOME` 是否指向了正确的 JDK 目录，并在终端运行 `java -version` 确认版本无误。
+
+## 搭建 IDE
+
+在开发模组之前，你还需要搭建开发环境，可以选择 [IntelliJ IDEA（推荐）](https://www.jetbrains.com/idea/download/)或者 [Visual Studio Code](https://code.visualstudio.com/)
+
+**开发 26.1 版本的模组需要IntelliJ IDEA 2025.3或更高版本。**
+
+如果你选择 VSC，那还需要安装扩展Extension Pack for Java，安装扩展后你可以使用命令`Java: Install New JDK`快速安装JDK。
+
+对于 IDEA，在创建项目后会提示安装 JDK。另外，你可以安装由社区开发的插件[Minecraft Development](https://plugins.jetbrains.com/plugin/8327-minecraft-development)，当然这不是必要的。
 
 ## 创建项目
 
-新建项目最方便的方式是使用官方的[模板生成器](https://fabricmc.net/develop/template/)：在网页上填好 Mod 名称、包名、目标 Minecraft 版本等信息，下载生成的项目压缩包即可，省去了手动改 `gradle.properties` 的麻烦。当然你也可以照旧手动 clone [`fabric-example-mod`](https://github.com/FabricMC/fabric-example-mod) 来新建项目。如果你使用IDEA进行开发，建议安装 **Minecraft Development 插件**（即原来的 MDEV/Minecraft DEV 插件），它对运行配置、混入（Mixin）等都有很好的支持，用起来很方便。
+你可以选择使用Minecraft Development插件创建项目，不过官方提供了更好更通用的方法：使用[Fabric模板模组生成器](https://fabricmc.net/develop/template/)
 
-生成Minecraft源代码是非常有必要的——只有这样你才能在 IDE 里查看、跳转游戏本体的（已反混淆的）源码。
+因为所有模组最终会加载到一起，所以请填写一个不会和别人重复的 Package Name。另外，你可以启用 Advanced Options 中的 Data Generation，可以用来帮你快速生成配方、进度、战利品表等任何 JSON 格式的文件
 
-运行 gradle 任务 `genSources`。如果你的 IDE 没有嵌入 gradle，在终端内运行以下命令：`./gradlew genSources`（Windows 下使用 `gradlew genSources`）。**IDEA 安装 Minecraft Development 插件后，导入项目时通常会自动完成这一步**。
+下载生成的模板以后打开项目。如果你使用 IDEA 此时顶端会提示你进行下载。
