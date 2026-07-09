@@ -106,6 +106,9 @@ deploy:
 # hexo-renderer-pandoc
 pandoc:
   args:
+    - -f
+    - markdown+hard_line_breaks
+    - --wrap=none
     - --mathjax
 
 # hexo-blog-encrypt
